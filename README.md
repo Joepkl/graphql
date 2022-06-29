@@ -12,6 +12,7 @@ Ik heb tijdens dit een project een automatisch gegeneerde portolio gemaakt. Alle
 # Hoe heb ik GraphQL gebruikt?
 
 ,,,
+
 app.get('/', (req, res) => {
   graphqlAuth(`{
     user(login: "Joepkl") {
@@ -41,6 +42,7 @@ app.get('/', (req, res) => {
       
   })
 })
+
 ,,,
 
 # Eindproduct

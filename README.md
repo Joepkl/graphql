@@ -49,3 +49,20 @@ app.get('/', (req, res) => {
 
 # Installeren
 
+
+Clone de repository
+
+```
+https://github.com/Joepkl/graphql.git
+```
+
+Installeer alle packages
+
+```
+npm install
+```
+
+Start de applicatie
+
+```
+npm start```

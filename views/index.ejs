@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>GitHub Joep</title>
+</head>
+<body>
+    <header>
+        <img src="images/github.png" alt="logo">
+        <h1>Portofolio Joep</h1>
+    </header>
+    <main>
+        <article id="intro">
+            <h2>Welkom,</h2>
+            <p>Hier onder zijn alle projecten van mij te vinden. Dit zijn eigen projecten, of projecten waar ik aan heb meegewerkt. Dit is een korte en bondige samenvatting van alle projecten op mijn GitHub. Voor meer informatie en code bestanden verwijs ik je graag door naar de GitHub repositories. Door op de bijbehorende link te klikken kan je deze bekijken.</p>
+        </article>
+        <section>
+            <form class="zoekBalk">
+                <input type="text" placeholder="Zoek naar projecten..." id="zoekInput" autocomplete="off">
+                <button id="zoekButton">Zoeken</button>
+            </form>
+        </section>
+
+        <% if(data.length) { %>
+            <ul>
+            <% for(let i = 0; i < data.length; i++) { %>
+                <li>
+                    <article>
+                        <h2><%= data[i].node.name %></h2>
+                        <p><%= data[i].node.description %></p>
+                        <h3>Status:</h3>
+                        <p>Created at: <%= data[i].node.createdAt %></p>
+                        <p>Updated at: <%= data[i].node.updatedAt %></p>
+                        <h3>Bekijk deze repository</h3>
+                        <a href="<%= data[i].node.url %>" adding the target=”_blank” ><%= data[i].node.url %></a>
+                        <h3>Profielfoto</h3>
+                        <img src="<%= data[i].node.openGraphImageUrl %>" alt="">
+                    </article>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

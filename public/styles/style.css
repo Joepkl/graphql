@@ -1,0 +1,142 @@
+/* Algemene styling */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: kardinalBold;
+    src: url(../fonts/lettersoup\ -\ Kardinal-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: kardinalLight;
+    src: url(../fonts/lettersoup\ -\ Kardinal-Light.otf);
+}
+
+body{
+    width: 100vw;
+    background-color: #4C5F6B;
+}
+
+/* Header styling */
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: double black 10px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+header img{
+    height: 80px;
+}
+
+h1{
+    font-family: kardinalBold;
+    color: #212121;
+    font-size: 3em;
+    margin-top: 11px;
+}
+
+
+/* Main */
+main{
+    width: 100%;
+}
+
+article#intro{
+    width: 500px;
+    padding: 30px;
+    color: white;
+    margin: 0 auto 20px auto;
+}
+
+
+/* Alle repo's stylen */
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul article{
+    background-color: #e76f51;
+    width: 450px;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 0 20px rgb(255, 38, 0);
+}
+
+ul article img{
+    width: 100px;
+}
+
+h2, h3{
+    font-family: kardinalBold;
+}
+
+a, p{
+    font-family: kardinalLight;
+    font-weight: 900;
+    font-size: 1em;
+}
+
+h2{
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+h3{
+    margin: 15px 0 5px 0;
+}
+
+
+/* Zoekbalk */
+section{
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+form input{
+    padding: 5px;
+    font-family: kardinalBold;
+    font-weight: 900;
+    font-size: 1.1em;
+    border: double black 5px;
+}
+
+form button{
+    padding: 5px 10px 5px 10px;
+    font-weight: 900;
+    font-family: kardinalBold;
+    font-size: 1.1em;
+    border: double white 5px;
+    background-color: #9d0208;
+    color: white;
+}
+
+
+/* Interactie */
+ul article:hover{
+    box-shadow: 0 0 20px rgb(185, 0, 0);
+}
+
+.hide{
+    display: none;
+}
+
+form input:focus{
+    width: 350px;
+    transition: .5s;
+}
+
+form button:hover{
+    background-color: #610105;
+}
+
